@@ -1,0 +1,68 @@
+/* Set a background image with blur and transparency */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* You can change this to any font you like */
+    position: relative; /* Position relative for child elements */
+}
+
+/* Add a pseudo-element for the blurred background */
+body::before {
+    content: '';
+    position: fixed; /* Fixed position to cover the whole viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://numberoneproperty.com/wp-content/uploads/2022/11/Ayer-Rajah-Expressway-AYE-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply blur effect to the image */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+/* Create a container for content to overlay on the background */
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the blurred background */
+    padding: 20px;
+}
+
+/* Style for like sections */
+.like-section {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    border-radius: 10px; /* Rounded corners for the section */
+    padding: 15px; /* Padding inside the section */
+    margin-bottom: 20px; /* Space between sections */
+}
+
+/* Style for headings */
+h1 {
+    color: #333; /* Dark color for main heading */
+}
+
+h2 {
+    color: #007BFF; /* Different color for category headings */
+}
+
+/* Style for incident categories */
+.Roadworks {
+    color: #FF5733; /* Red color for roadworks */
+}
+
+.Accidents {
+    color: #FFC300; /* Yellow color for accidents */
+}
+
+.Breakdowns {
+    color: #C70039; /* Dark red color for breakdowns */
+}
+
+/* General list styles */
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove padding from left */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
