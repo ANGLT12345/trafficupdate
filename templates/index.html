@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Incidents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container"> <!-- Add container div -->
+        <h1>Traffic Incidents</h1>
+
+        {% if incidents %}
+            {% for category, incidents in incidents.items() %}
+                <div class="like-section"> <!-- Like section for each category -->
+                    <h2 class="{{ category }}">{{ category }}</h2> <!-- Add category class -->
+                    <ul>
+                        {% for incident in incidents %}
+                            <li>{{ incident.Message }}</li>  <!-- Display the full message without splitting -->
+                        {% else %}
+                            <li>No incidents reported.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No incidents available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
