@@ -9,7 +9,7 @@ api_key = 'VROVFNeMSI+qIQo/OLuNw=='  # Replace with your actual API key
 
 def fetch_traffic_incidents():
     headers = {
-        'AccountKey': 'VROVFNeMSI+qIQ4o/OLuNw==',
+        'AccountKey': '',
         'Accept': 'application/json'
     }
 
